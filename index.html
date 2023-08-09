@@ -365,5 +365,44 @@
     <div class="snackbars" id="form-output-global"></div>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+
+	  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Outras tags de cabeçalho, como meta tags, links de CSS, etc. -->
+    <title>Seu Título</title>
+</head>
+<body>
+
+    <!-- Seu conteúdo, incluindo a navbar e outras seções -->
+
+    <!-- Outros scripts que você possa ter, por exemplo, um script de slider, etc. -->
+
+    <!-- Adicionando jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Código para rolagem suave -->
+    <script>
+        $(document).ready(function(){
+            $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+
   </body>
-  
+</html>
+
